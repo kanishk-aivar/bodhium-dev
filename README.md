@@ -341,7 +341,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ by the Bodhium Team**
+**Made with ❤️ by the Kaniz (AIVAR) Team**
 
 [![GitHub stars](https://img.shields.io/github/stars/kanishk-aivar/bodhium-dev?style=social)](https://github.com/kanishk-aivar/bodhium-dev)
 [![GitHub forks](https://img.shields.io/github/forks/kanishk-aivar/bodhium-dev?style=social)](https://github.com/kanishk-aivar/bodhium-dev)
