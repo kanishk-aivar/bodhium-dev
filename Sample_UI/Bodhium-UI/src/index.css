@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BODHIUM Design System - AWS Console (Cloudscape) Style
+All colors MUST be HSL for proper theming.
+AWS Console Light Theme Implementation
+*/
+
+@layer base {
+  :root {
+    /* Core AWS Console color palette - Light Theme */
+    --background: 0 0% 100%; /* #ffffff - Main content area */
+    --foreground: 220 13% 9%; /* #16191f - Headings, primary text */
+
+    /* Card system with light background */
+    --card: 0 0% 100%; /* #ffffff - Card backgrounds */
+    --card-foreground: 220 13% 9%; /* #16191f - Card text */
+
+    /* Popover with light theme */
+    --popover: 0 0% 100%; /* #ffffff - Popover backgrounds */
+    --popover-foreground: 220 13% 9%; /* #16191f - Popover text */
+
+    /* Primary: AWS Blue for primary actions */
+    --primary: 210 100% 42%; /* #0972d3 - Primary action buttons, links, highlights */
+    --primary-foreground: 0 0% 100%; /* #ffffff - Text on primary */
+    --primary-glow: 210 100% 52%; /* Lighter blue for glow effects */
+
+    /* Secondary: Accent Blue for focus/selected states */
+    --secondary: 210 100% 38%; /* #206bc4 - Focus/selected states, links */
+    --secondary-foreground: 0 0% 100%; /* #ffffff - Text on secondary */
+
+    /* Muted: UI Gray for backgrounds */
+    --muted: 180 3% 95%; /* #f2f3f3 - Light backgrounds */
+    --muted-foreground: 220 9% 46%; /* #6b7280 - Secondary text */
+
+    /* Accent: AWS Blue for accents */
+    --accent: 210 100% 42%; /* #0972d3 - Accent elements */
+    --accent-foreground: 0 0% 100%; /* #ffffff - Text on accent */
+
+    /* Status colors - AWS semantic colors */
+    --destructive: 0 84% 47%; /* #d91515 - Error status, destructive actions */
+    --destructive-foreground: 0 0% 100%; /* #ffffff - Text on destructive */
+    --success: 120 52% 34%; /* #2d862d - Success status, confirmations */
+    --success-foreground: 0 0% 100%; /* #ffffff - Text on success */
+    --warning: 36 100% 50%; /* #ff9900 - Warnings, notices */
+    --warning-foreground: 220 13% 9%; /* #16191f - Text on warning */
+
+    /* Interactive elements */
+    --border: 0 0% 85%; /* #dadada - Border/Divider Gray */
+    --input: 180 3% 95%; /* #f2f3f3 - Input backgrounds */
+    --ring: 210 100% 42%; /* #0972d3 - Focus ring */
+
+    /* AWS Console themed design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 42%), hsl(210 100% 52%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(180 3% 95%));
+    --gradient-glow: linear-gradient(135deg, hsl(210 100% 42% / 0.1), hsl(210 100% 52% / 0.1));
+    
+    /* Shadows with AWS blue glow effects */
+    --shadow-primary: 0 4px 20px hsl(210 100% 42% / 0.15);
+    --shadow-glow: 0 0 40px hsl(210 100% 42% / 0.2);
+    --shadow-card: 0 4px 12px hsl(220 13% 9% / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.5rem;
+
+    /* Sidebar - AWS Console style */
+    --sidebar-background: 180 3% 95%; /* #f2f3f3 - Light sidebar background */
+    --sidebar-foreground: 220 13% 9%; /* #16191f - Sidebar text */
+    --sidebar-primary: 210 100% 42%; /* #0972d3 - Sidebar primary */
+    --sidebar-primary-foreground: 0 0% 100%; /* #ffffff - Text on sidebar primary */
+    --sidebar-accent: 0 0% 100%; /* #ffffff - Sidebar accent */
+    --sidebar-accent-foreground: 220 13% 9%; /* #16191f - Text on sidebar accent */
+    --sidebar-border: 0 0% 85%; /* #dadada - Sidebar borders */
+    --sidebar-ring: 210 100% 42%; /* #0972d3 - Sidebar focus ring */
+  }
+
+  .dark {
+    /* Dark mode - AWS Console dark theme */
+    --background: 220 13% 9%; /* #16191f - Background (Dark) */
+    --foreground: 180 3% 95%; /* #f2f3f3 - Text (Light) */
+
+    --card: 220 13% 9%; /* #16191f - Card backgrounds */
+    --card-foreground: 180 3% 95%; /* #f2f3f3 - Card text */
+
+    --popover: 220 13% 9%; /* #16191f - Popover backgrounds */
+    --popover-foreground: 180 3% 95%; /* #f2f3f3 - Popover text */
+
+    --primary: 195 100% 75%; /* #60cdf6 - Primary Blue (Dark Mode) */
+    --primary-foreground: 220 13% 9%; /* #16191f - Text on primary */
+
+    --secondary: 220 13% 9%; /* #16191f - Secondary backgrounds */
+    --secondary-foreground: 180 3% 95%; /* #f2f3f3 - Secondary text */
+
+    --muted: 220 13% 9%; /* #16191f - Muted backgrounds */
+    --muted-foreground: 220 9% 61%; /* #8c909b - Gray (Dark Mode) */
+
+    --accent: 220 13% 9%; /* #16191f - Accent backgrounds */
+    --accent-foreground: 180 3% 95%; /* #f2f3f3 - Accent text */
+
+    --destructive: 0 84% 47%; /* #d91515 - Error Red */
+    --destructive-foreground: 180 3% 95%; /* #f2f3f3 - Text on destructive */
+
+    --border: 220 13% 9%; /* #16191f - Borders */
+    --input: 220 13% 9%; /* #16191f - Input backgrounds */
+    --ring: 195 100% 75%; /* #60cdf6 - Focus ring */
+
+    /* Dark mode sidebar */
+    --sidebar-background: 220 13% 9%; /* #16191f - Dark sidebar background */
+    --sidebar-foreground: 180 3% 95%; /* #f2f3f3 - Dark sidebar text */
+    --sidebar-primary: 195 100% 75%; /* #60cdf6 - Dark sidebar primary */
+    --sidebar-primary-foreground: 220 13% 9%; /* #16191f - Text on dark sidebar primary */
+    --sidebar-accent: 220 13% 9%; /* #16191f - Dark sidebar accent */
+    --sidebar-accent-foreground: 180 3% 95%; /* #f2f3f3 - Text on dark sidebar accent */
+    --sidebar-border: 220 13% 9%; /* #16191f - Dark sidebar borders */
+    --sidebar-ring: 195 100% 75%; /* #60cdf6 - Dark sidebar focus ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  /* AWS-themed background pattern */
+  .ai-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(210 100% 42% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(210 100% 52% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(210 100% 42% / 0.03) 0%, transparent 50%);
+  }
+  
+  /* Glow effects for interactive elements - AWS blue */
+  .glow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer components {
+  /* Custom component styles - AWS Console style */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ai-border {
+    border: 1px solid hsl(var(--border));
+    background: var(--gradient-glow);
+  }
+  
+  /* Animation utilities */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(210 100% 42% / 0.1);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(210 100% 42% / 0.2), 0 0 40px hsl(210 100% 52% / 0.1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
